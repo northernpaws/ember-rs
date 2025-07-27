@@ -1457,9 +1457,43 @@ pub enum Status {
 }
 
 /// Network scan types.
-pub type NetworkScanType = u8;
-/// Differentiates among ZLL network operations.
-pub type ZllNetworkOperation = u8;
+/// 
+/// EzspNetworkScanType 
+#[repr(u8)]
+pub enum NetworkScanType {
+    /// An energy scan scans each channel for its RSSI value.
+    /// 
+    /// EZSP_ENERGY_SCAN 
+    EnergyScan = 0x00,
+    /// An active scan scans each channel for available networks.
+    /// 
+    /// EZSP_ACTIVE_SCAN 
+    ActiveScan = 0x01,
+}
+
+/// Differentiates ZLL network operations.
+/// 
+/// EzspZllNetworkOperation
+#[repr(u8)]
+pub enum ZLLNetworkOperation {
+    /// ZLL form network command.
+    /// 
+    /// EZSP_ZLL_FORM_NETWORK 
+    FormNetwork = 0x00,
+    /// ZLL join target command.
+    /// 
+    /// EZSP_ZLL_JOIN_TARGET 
+    JoinTarget = 0x01,
+}
+
 /// Validates Source Route Overhead Information cached.
-pub type SourceRouteOverheadInformation = u8;
+/// 
+/// EzspSourceRouteOverheadInformation 
+#[repr(u8)]
+pub enum SourceRouteOverheadInformation {
+    /// EZSP source route overhead unknown.
+    /// 
+    /// EZSP_SOURCE_ROUTE_OVERHEAD_UNKNOWN 
+    OverheadUnknown = 0xFF
+}
 

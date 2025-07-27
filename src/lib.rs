@@ -1,6 +1,8 @@
 pub mod ezsp;
 pub mod ember;
 
+pub mod frames;
+
 use bit_struct::*; 
 
 enums! {
