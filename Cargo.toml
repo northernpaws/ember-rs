@@ -3,5 +3,11 @@ name = "ember-rs"
 version = "0.1.0"
 edition = "2024"
 
+[features]
+default = ["std"]
+
+std = []
+
 [dependencies]
 bit-struct = "0.3.2"
+bitmask = "0.5.0"

@@ -19,10 +19,17 @@ dependencies = [
 ]
 
 [[package]]
+name = "bitmask"
+version = "0.5.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "5da9b3d9f6f585199287a473f4f8dfab6566cf827d15c00c219f53c645687ead"
+
+[[package]]
 name = "ember-rs"
 version = "0.1.0"
 dependencies = [
  "bit-struct",
+ "bitmask",
 ]
 
 [[package]]
